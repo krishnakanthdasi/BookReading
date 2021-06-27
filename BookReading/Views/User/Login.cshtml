@@ -1,0 +1,51 @@
+﻿@model BookReading.EntityDataModel.User
+
+
+@{ ViewBag.Title = "Login"; }
+
+<style type="text/css">
+    .login-dark {
+        background: linear-gradient(145deg, #575b5d, #252b2d);
+    }
+
+    body {
+        font-size: 13px;
+    }
+</style>
+
+<div style="margin-top:30px;"></div>
+
+<div class="col-4">
+    <h2 style="text-align:center">Login </h2>
+</div>
+
+<div class="row m-4">
+    <div class="col-4">
+        <div class="login-dark p-3 shadow-lg rounded">
+            <div class="pt-3">
+                <h2 class="text-white ">Sign In</h2>
+            </div>
+            <form class="mt-5" action="/User/Validate" method="post">
+                <div class="form-group">
+                    <input type="email" class="form-control form-control-sm bg-light" placeholder="Email Id" name="UserEmail">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control form-control-sm bg-light" placeholder="Password" name="UserPassword">
+                </div>
+
+                <div class="mt-5">
+                    <button class="btn btn-sm btn-light col">
+                        Login
+                    </button>
+                </div>
+
+
+                <div class="mt-5">
+                    <p class="text-white text-center">
+                        <a href="/User/Register" class="text-warning">Click here to Register</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
