@@ -119,7 +119,7 @@ namespace BookReading.Controllers
         public ActionResult redirectLogin()
         {
             
-            return RedirectToAction("Login", "Authentication", "Security");
+            return RedirectToAction("Login", "User");
             
         }
 

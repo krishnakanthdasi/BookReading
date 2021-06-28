@@ -26,18 +26,18 @@
                         if (userlogeedin)
                         {
                             <li class="active">@Html.ActionLink("Home", "Index", new { controller = "Home" })</li>
-                            <li>@Html.ActionLink("Create Event", "Index", new { Controller = "Events" })</li>
-                            <li>@Html.ActionLink("View My Events", "ViewMyEvent", new { Controller = "Events"  })</li>
-                            <li>@Html.ActionLink("View Invitations", "Invitations", new { Controller = "Events" })</li>
+                            <li>@Html.ActionLink("Create Event", "Index", new { Controller = "Event" })</li>
+                            <li>@Html.ActionLink("View My Events", "ViewMyEvent", new { Controller = "Event"  })</li>
+                            <li>@Html.ActionLink("View Invitations", "Invitations", new { Controller = "Event" })</li>
  }
                         else
                         {
                             <li class="active">@Html.ActionLink("Home", "Index", new { controller = "Home"  })</li>
  } }
 
-                    <li>@Html.ActionLink("Public Events", "PublicEvents", new { Controller = "Events"  })</li>
-                    <li>@Html.ActionLink("Upcoming Events", "UpcomingEvents", new { Controller = "Events"  })</li>
-                    <li>@Html.ActionLink("Past Events", "PastEvents", new { Controller = "Events"  })</li>
+                    <li>@Html.ActionLink("Public Events", "PublicEvents", new { Controller = "Event"  })</li>
+                    <li>@Html.ActionLink("Upcoming Events", "UpcomingEvents", new { Controller = "Event"  })</li>
+                    <li>@Html.ActionLink("Past Events", "PastEvents", new { Controller = "Event"  })</li>
                     @{ if (userlogeedin)
                                     {
                                         int userId = testuser.LoggedUserId();
@@ -45,7 +45,7 @@
                                         if (userRole == "A")
                                         {
                          
-                                            <li>@Html.ActionLink("View All Events", "AllEvents", new { Controller = "Events" })</li> }
+                                            <li>@Html.ActionLink("View All Events", "AllEvents", new { Controller = "Event" })</li> }
                                                         } }
                     @{ if (userlogeedin)
                                     {

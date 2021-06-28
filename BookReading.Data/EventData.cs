@@ -14,22 +14,22 @@ namespace BookReading.Data
         {
             db = new BookReadingDBContext();
         }
-        public Boolean AddEvents(Event readingEvent)
+        public Event AddEvents(Event readingEvent)
         {
             if (readingEvent == null)
             {
-                return false;
+                return null;
             }
 
             if (readingEvent.EventDate == null || readingEvent.EventDescription == null || readingEvent.EventLocation == null ||
                 readingEvent.EventName == null || readingEvent.EventOtherDetails == null || readingEvent.EventStartTime == null)
             {
-                return false;
+                return null;
             }
 
             db.Events.Add(readingEvent);
             db.SaveChanges();
-            return true;
+            return readingEvent;
 
         }
         public List<Event> GetEvents()

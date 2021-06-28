@@ -28,7 +28,11 @@ namespace BookReading.Business
         {
             return userData.getUser();
         }
-
+        public int getUserId(string email)
+        {
+            return userData.getUserId(email);
+        }
+        
         public string[] UserIds(int userId)
         {
 

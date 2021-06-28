@@ -54,6 +54,12 @@ namespace BookReading.Data
             var result = db.Users.Single(d => d.UserId == userId);
             return result.UserRole;
         }
+
+        public int getUserId(string email)
+        {
+            var result = db.Users.Single(d => d.UserEmail == email);
+            return result.UserId;
+        }
         public int checkUser(string useremail, string password)
         {
             int userId = 0;

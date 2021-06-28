@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Comment.cs" />
     <Compile Include="Event.cs" />
+    <Compile Include="EventModel.cs" />
     <Compile Include="Invitation.cs" />
     <Compile Include="BookReadingDBContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

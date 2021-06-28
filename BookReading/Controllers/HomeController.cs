@@ -1,4 +1,5 @@
 ﻿using BookReading.BusinessFacades;
+using BookReading.EntityDataModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace BookReading.Controllers
 {
     public class HomeController : Controller
     {
+        private bool result = false;
         EventFacade eventFacade;
         UserController userController;
         public HomeController()
@@ -38,12 +40,6 @@ namespace BookReading.Controllers
              
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
 
         public ActionResult Contact()
         {

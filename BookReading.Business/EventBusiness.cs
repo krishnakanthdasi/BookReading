@@ -16,7 +16,7 @@ namespace BookReading.Business
             eventData = new EventData();
         }
 
-        public Boolean AddEvents(Event readingEvent)
+        public Event AddEvents(Event readingEvent)
         {
             return eventData.AddEvents(readingEvent);
         }
